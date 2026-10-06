@@ -1,0 +1,45 @@
+:root {
+  --paper: #f3f5f2;
+  --ink: #1d2b27;
+  --muted: #66746f;
+  --line: #cfd8d3;
+  --accent: #1f6f5c;
+  --danger: #b3412f;
+  --card: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #14201c; --ink: #e7efeb; --muted: #94a59f;
+    --line: #2c3d37; --accent: #5cc4a8; --danger: #ef8a77; --card: #1b2a25;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif; line-height: 1.5;
+}
+.app { max-width: 560px; margin: 0 auto; padding: 48px 20px 80px; }
+.masthead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+h1 { margin: 0; font-size: 2rem; letter-spacing: -0.02em; }
+.tally { margin: 0; color: var(--muted); font-size: .95rem; }
+.task-form { display: flex; gap: 8px; margin-bottom: 16px; }
+.task-form input {
+  flex: 1; padding: 11px 12px; font: inherit; color: inherit;
+  background: var(--card); border: 1px solid var(--line); border-radius: 6px;
+}
+button { font: inherit; cursor: pointer; border-radius: 6px; }
+.task-form button {
+  padding: 0 18px; background: var(--accent); color: #fff; border: 0; font-weight: 600;
+}
+.task-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.task { display: flex; align-items: center; gap: 12px; padding: 12px 4px; border-bottom: 1px solid var(--line); }
+.task input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--accent); }
+.title { flex: 1; word-break: break-word; }
+.task.done .title { text-decoration: line-through; color: var(--muted); }
+.edit-input { flex: 1; padding: 6px 8px; font: inherit; color: inherit; background: var(--card); border: 1px solid var(--accent); border-radius: 4px; }
+.ghost { background: none; border: 0; color: var(--muted); padding: 4px 8px; }
+.ghost:hover { color: var(--ink); background: var(--line); }
+.ghost.danger:hover { color: var(--danger); }
+.muted { color: var(--muted); }
+.error { color: var(--danger); background: color-mix(in srgb, var(--danger) 10%, transparent); padding: 8px 12px; border-radius: 6px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
