@@ -3,7 +3,8 @@
 A full-stack To-Do List built with **MongoDB, Express.js, React (Vite) and Node.js**.
 Tasks are stored in MongoDB and managed through a REST API - add, view, edit, complete and delete, all without a page reload.
 
-**GitHub repository:** <https://github.com/adityakdileepb23cs1105-hub/Assignment_2>
+**GitHub repository:** <https://github.com/adityakdileepb23cs1105-hub/Assignment_2git add README.md
+git commit -m "Add repository URL to README">
 
 ## Project structure
 
